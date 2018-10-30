@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #85a5d4;  
+  font-family: Roboto, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.devices {
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+  width: 65%;
+  padding: 20px;
+  list-style-type: none;
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 22px 50px rgba(14,21,47, .2), 0 8px 20px rgba(14,21,47, .2)
+}
+
+.device {
+  width: 33.33%;
+  padding: 30px;
+
+  border-radius: 5px;
+  background-position: center 20px;
+  background-repeat: no-repeat;
+  background-size: 70px;
+  transition: background-color 0.2s ease-in;
+}
+
+.device:hover,
+.device:focus {
+  background-color: #f6f6f6;
+}
+
+.device-mobile {
+  background-image: url("./img/device.svg");
+}
+
+.device-desktop {
+  background-image: url("./img/laptop.svg");
+}
+
+.device-tv {
+  background-image: url("./img/monitor.svg");
+}
+
+.device__title {
+  margin-bottom: 20px;
+  margin-top: 90px;
+
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #5673d5;
+}
+
+.device__description {
+  color: #a7a7a7;
+}
+
+.device__price {
+  margin-top: 20px;
+  color: #5673d5;
+}
+
+.device__value {
+  font-weight: 500;
+  font-size: 30px;
+}
+
+.device__currency {
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .devices {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    width: 80%;
+  }
+
+  .device {
+    width: 100%;
+    box-sizing: border-box; 
+    padding: 20px 15%; 
+  }
+}
