@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Loop 1 - Step 2</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="container">
+    <form action="#" method="POST" class="payment">
+      <ul class="payment__step">
+        <li class="payment__step-indicator payment__step-indicator--active">1</li>
+        <li class="payment__step-indicator">2</li>
+        <li class="payment__step-indicator">3</li>
+      </ul>
+      
+      <fieldset class="payment__card-info">
+        <legend class="payment__heading">Payment Method</legend>
+
+        <ul class="payment__cards">
+          <li class="payment__card">
+            <input class="visually-hidden" type="radio" name="card" value="card-visa" id="card-visa">
+            <label class="payment__card-name" for="card-visa">
+              <img class="payment__card-img" src="./img/visa.svg" alt="Visa logo" width="50">
+              Visa
+            </label>
+          </li>
+
+          <li class="payment__card">         
+            <input class="visually-hidden" type="radio" name="card" value="card-mastercard" id="card-mastercard" checked>
+            <label class="payment__card-name" for="card-mastercard">
+              <img class="payment__card-img" src="./img/mastercard.svg" alt="Mastercard logo" width="50">
+              Mastercard
+            </label>
+          </li>
+
+          <li class="payment__card">
+            <input class="visually-hidden" type="radio" name="card" value="card-maestro" id="card-maestro">
+            <label class="payment__card-name" for="card-maestro">
+              <img class="payment__card-img" src="./img/maestro.svg" alt="Maestro logo" width="50">
+              Maestro
+            </label>  
+          </li>
+        </ul>
+      </fieldset>
+
+      <button class="payment__button" type="button">
+        <span>Next Step</span>
+      </button>
+    </form>
+  </div>
+</body>
+</html>

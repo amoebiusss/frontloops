@@ -1,0 +1,190 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  background-image: url('./img/background.jpg');
+  background-size: cover;
+  font-family: Roboto, Arial, sans-serif;
+  color: #333333;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.payment {
+  width: 340px;
+  padding-top: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+@media(max-width: 480px) {
+  .payment {
+    width: 280px;
+  }
+}
+
+.payment__step {
+  padding: 10px;
+  width: 50px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  font-size: 0;
+}
+
+.payment__step-indicator {
+  display: block;
+  width: 8px;
+  height: 8px;
+  margin-right: 6px;
+  border-radius: 50%;
+  background-color: #dedede;
+}
+
+.payment__step-indicator:last-child {
+  margin-right: 0;
+}
+
+.payment__step-indicator--active {
+  background-color: #aaaaaa;
+}
+
+.payment__card-info {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.payment__heading {
+  display: block;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  font-weight: 700;
+  font-size: 1.4em;
+  letter-spacing: 0.01em;
+  text-align: center;
+}
+
+.payment__card {
+  vertical-align: middle;
+  border-top: 1px solid #eeeeee;
+  transition: background 0.2s ease-out;
+}
+
+.payment__card:hover, 
+.payment__card:focus {
+  background: #eaeaea;
+}
+
+.payment__card-name {
+  position: relative;
+  padding: 18px 35px;
+  font-size: 0.9em;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+}
+
+input[type="radio"]:checked + .payment__card-name {
+  color: #333333;
+}
+
+input[type="radio"]:checked + .payment__card-name::after {
+  position: absolute;
+  content: "";
+  right: 17px;
+  width: 24px;
+  height: 24px;
+  background-image: url("./img/check.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.payment__card-name {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  color: #aaaaaa;
+}
+
+.payment__card-name img {
+  margin-right: 25px;
+}
+
+.payment__button {
+  display: block;
+  padding: 20px 0;
+  width: 100%;
+  background-color: #598bdd;
+  color: #ffffff;
+  font-size: 0.9em;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  border: none;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  transition: background 0.2s ease-out;
+  cursor: pointer;
+}
+
+.payment__button:hover,
+.payment__button:focus {
+  background-color: #517cc3;
+  outline: none;
+}
+
+.payment__button span {
+  position: relative;
+  padding-right: 24px;
+}
+
+.payment__button span::after {
+  position: absolute;
+  content: "";
+  left: calc(100% - 16px);
+  width: 16px;
+  height: 16px;
+
+  background-image: url("./img/arrow.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
